@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Dish</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>burger</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>chicken</td>
+                <td>140</td>
+            </tr>
+        </table>
+    </body>
+</html>
