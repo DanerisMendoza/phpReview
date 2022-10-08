@@ -7,6 +7,7 @@
         <table border="2px solid green">
             <?php 
                     //random table but only 1-10
+                    //setting up array
                     $arr = array();
                     $CanNotBeUsedArr = array();
                     for($i=0; $i<=100; $i++){
@@ -22,19 +23,22 @@
                         }
                         array_push($arr,$rand);
                     }
+                    //setting up table
                     $num = 0;
                     for($i=0; $i<10; $i++){
                     echo "<tr>";
                     for($j=0; $j<10; $j++){
                         if(isset($_GET['usedArr2'])){
                             $arr2 = explode(',',$_GET['usedArr2']);
-                            if(in_array($arr[$num],$arr2))
-                                echo "<td style='background-color: red;' '><a href='?usedArr2=$arr[$num]'>$arr[$num]</a></td>";
-                            else
-                                echo "<td><a href='?usedArr2=$arr[$num]'>*</a></td>";
+                            if(in_array($arr[$num],$arr2)){
+                                echo "<td id='$num' style='background-color: red;' '><a href='?usedArr2=$arr[$num]'>$arr[$num]</a></td>";
+                            }
+                            else{
+                                echo "<td id='$num'><a href='?usedArr2=$arr[$num]'>*</a></td>";
+                            }
                         }
                         else{
-                            echo "<td><a href='?usedArr2=$arr[$num]'>*</a></td>";
+                            echo "<td id='$num'><a href='?usedArr2=$arr[$num]'>*</a></td>";
                         }
                         $num++;
                     }
