@@ -14,5 +14,7 @@ $brandsA = [
     'f' => 'Facebook'
   ];
   $replaced = array_replace($brandsA, $brandsB);
-  print_r($replaced);
+  echo"ReplaceArr: ";print_r($replaced);echo"</br>";
+  // $brandsB = ['g' => 'accenture'];
+  // echo"brandBWithPushArr : ";print_r($brandsB);echo"</br>";
 ?>

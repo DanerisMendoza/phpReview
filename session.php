@@ -9,4 +9,6 @@ if(!isset($_SESSION['arrS'])){
 print_r($_SESSION['arrS']);
 echo '</br>';
 echo $_SESSION['arrS'][1];
+unset($_SESSION['arrS']);
+print_r($_SESSION['arrS']);
 ?>

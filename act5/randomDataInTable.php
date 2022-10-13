@@ -7,11 +7,11 @@
         <table border="2px solid green">
             <?php
                 $usedArr = array();
-                for($i=0; $i<10; $i++){
+                for($i=0; $i<5; $i++){
                     echo "<tr>";
-                    for($j=0; $j<10; $j++){
+                    for($j=0; $j<5; $j++){
                         do{
-                            $rand = rand(1,100);
+                            $rand = rand(1,25);
                         }
                         while(in_array($rand,$usedArr));
                         array_push($usedArr,$rand);
@@ -32,10 +32,10 @@
         </table>
         <a href="?usedArr2=<?php  
         if(isset($_GET['usedArr2'])){
-            if(count($arr) == 100)
+            if(count($arr) == 25)
                 return;
             do{
-            $newNum = rand(1,100);
+            $newNum = rand(1,25);
             }
             while(in_array($newNum,$arr));
             echo $_GET['usedArr2'].','.$newNum;

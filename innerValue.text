@@ -1,0 +1,6 @@
+<script>
+    var a = document.getElementById($aId);
+    a.innerHTML = '*';
+    var b = document.getElementById($bId);
+    b.innerHTML = '*';
+</script>
